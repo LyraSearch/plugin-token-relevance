@@ -1,5 +1,5 @@
 import t from 'tap'
-import { create, insert } from '@lyrasearch/lyra'
+import { create, insert, insertBatch } from '@lyrasearch/lyra'
 import { countOccurrencies, getAllTokensInAllDocsByProperty, generateWeights } from '../index'
 
 t.test('countOccurrencies', async t => {
@@ -38,25 +38,24 @@ t.test('countOccurrencies', async t => {
     t.matchSnapshot(result, `${t.name}-O1`)
   })
 
-  t.test('it should correctly generate weights', t => {
+  t.test('it should correctly generate weights', async t => {
     t.plan(1)
 
     const lyra = create({
       schema: {
-        name: 'string',
-        description: 'string'
+        category: 'string',
+        headline: 'string',
+        authors: 'string'
       }
     })
 
-    insert(lyra, {
-      name: 'John Doe',
-      description: 'My example description'
-    })
+    const dataset = require('./datasets/news.json').map((data: any) => ({
+      category: data.category,
+      headline: data.headline,
+      authors: data.authors
+    }))
 
-    insert(lyra, {
-      name: 'Jane Doe',
-      description: 'Another example description'
-    })
+    await insertBatch(lyra, dataset)
 
     const result = generateWeights(lyra)
 

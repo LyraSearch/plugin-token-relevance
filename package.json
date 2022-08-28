@@ -29,7 +29,7 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@lyrasearch/lyra": "^0.1.3"
+    "@lyrasearch/lyra": "^0.1.4"
   },
   "devDependencies": {
     "@types/node": "^18.6.4",
