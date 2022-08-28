@@ -1,6 +1,6 @@
 {
   "name": "@lyrasearch/plugin-token-relevance",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.1-alpha.1",
   "description": "Plugin to add TF-IDF scores to a Lyra index",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",

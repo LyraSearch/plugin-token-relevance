@@ -10,7 +10,7 @@ export interface TFIDFScores {
   }
 }
 
-export function generateWeights<T extends PropertiesSchema> (lyra: Lyra<T>): TFIDFScores {
+export function generateScores<T extends PropertiesSchema> (lyra: Lyra<T>): TFIDFScores {
   const docs = lyra.docs
   const N = Object.keys(docs).length
   const allTokensInDocs = getAllTokensInAllDocsByProperty(lyra)

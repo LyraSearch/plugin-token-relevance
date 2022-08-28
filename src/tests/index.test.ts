@@ -1,6 +1,6 @@
 import t from 'tap'
 import { create, insert, insertBatch } from '@lyrasearch/lyra'
-import { generateWeights } from '../index'
+import { generateScores } from '../index'
 import { countOccurrencies, getAllTokensInAllDocsByProperty } from '../utils'
 
 t.test('countOccurrencies', async t => {
@@ -58,7 +58,7 @@ t.test('countOccurrencies', async t => {
 
     await insertBatch(lyra, dataset)
 
-    const result = generateWeights(lyra)
+    const result = generateScores(lyra)
 
     t.matchSnapshot(result, `${t.name}-O1`)
   })
