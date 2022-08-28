@@ -2,7 +2,7 @@
 
 [![Tests](https://github.com/LyraSearch/plugin-token-relevance/actions/workflows/tests.yml/badge.svg)](https://github.com/LyraSearch/plugin-token-relevance/actions/workflows/tests.yml)
 
-This plugin aims to provide data persistence capabilities to Lyra.
+Plugin to add TF-IDF scores to a Lyra index.
 
 | Runtime        | Status            |
 | -------------- | ----------------- |
