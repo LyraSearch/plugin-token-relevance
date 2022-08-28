@@ -1,11 +1,11 @@
 {
   "extends": "./tsconfig.json",
   "include": [
-    "src/node-bun"
+    "src"
   ],
   "compilerOptions": {
     "target": "ESNext",
-    "module": "CommonJS",
-    "outDir": "./dist/node/cjs",
+    "module": "ESNext",
+    "outDir": "./dist/esm",
   },
 }

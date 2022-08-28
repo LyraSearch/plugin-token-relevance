@@ -1,6 +1,7 @@
 import t from 'tap'
 import { create, insert, insertBatch } from '@lyrasearch/lyra'
-import { countOccurrencies, getAllTokensInAllDocsByProperty, generateWeights } from '../index'
+import { generateWeights } from '../index'
+import { countOccurrencies, getAllTokensInAllDocsByProperty } from '../utils'
 
 t.test('countOccurrencies', async t => {
   t.plan(3)
