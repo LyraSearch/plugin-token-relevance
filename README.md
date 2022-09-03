@@ -15,7 +15,7 @@ Plugin to add TF-IDF scores to a Lyra index.
 # Usage
 
 For the complete usage guide, please refer to the
-[official plugin documentation](https://docs.lyrajs.io/docs/plugins/plugin-token-relevance).
+[official plugin documentation](https://docs.lyrajs.io/plugins/plugin-token-relevance).
 
 ## TL;DR
 
